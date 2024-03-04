@@ -14,11 +14,11 @@ if platform.system() != 'Windows':
 
 from models.common import *
 from models.experimental import *
-from utils.general import LOGGER, check_version, check_yaml, make_divisible, print_args
-from utils.plots import feature_visualization
-from utils.torch_utils import (fuse_conv_and_bn, initialize_weights, model_info, profile, scale_img, select_device,
+from yolo_utils.general import LOGGER, check_version, check_yaml, make_divisible, print_args
+from yolo_utils.plots import feature_visualization
+from yolo_utils.torch_utils import (fuse_conv_and_bn, initialize_weights, model_info, profile, scale_img, select_device,
                                time_sync)
-from utils.tal.anchor_generator import make_anchors, dist2bbox
+from yolo_utils.tal.anchor_generator import make_anchors, dist2bbox
 
 try:
     import thop  # for FLOPs computation
